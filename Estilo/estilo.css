@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #030303;
+}
+
+nav {
+  background-color: #030303;
+}
+
+ul li {
+  display: inline-block;
+  margin-left: 8%;
+  padding: 0.1%;
+  margin-bottom: 0.5%;
+}
+ul li a {
+  color: #f504c1;
+  list-style: none;
+  text-decoration-line: none;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+main {
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+main div h1 {
+  margin-bottom: 2%;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 50px;
+  font-weight: bold;
+}
+main section {
+  display: inline-block;
+  width: 100%;
+}
+main section div {
+  height: 300px;
+}
+main section div h2 {
+  border-style: solid;
+  background-color: #030303;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fdfdfd;
+  text-align: center;
+}
+main section div p {
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #030303;
+}
+footer ul li {
+  display: inline-block;
+  margin-left: 8%;
+  padding: 0.1%;
+  margin-bottom: 0.5%;
+}
+footer ul li a {
+  color: #f504c1;
+  list-style: none;
+  text-decoration-line: none;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=estilo.css.map */
