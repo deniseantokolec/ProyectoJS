@@ -14,6 +14,16 @@ $color2:rgb(253, 253, 253);
 //bordes
 $borde1: solid;
 
+//texto
+$font-family:'Source Code Pro', monospace;
+$tamaño1:12px;
+$tamaño2:14px;
+$tamaño3:16px;
+$tamaño4:18px;
+$tamaño5:20px;
+$tañano6:50px;
+
+
 header{
     background-color: $backgroudcolo1;
 }
@@ -35,7 +45,7 @@ ul li{
         text-decoration-line: none;
         font-family: 'Source Code Pro', monospace;
         font-weight: bold;
-        font-size: 16px;
+        font-size: $tamaño3;
     }
 }
 
@@ -47,8 +57,8 @@ main{
         h1{
             margin-bottom: 2%;
             text-align: center;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 50px;
+            font-family: $font-family;
+            font-size: $tañano6;
             font-weight: bold;
         }
     }
@@ -60,23 +70,160 @@ main{
             h2{
                 border-style: $borde1;
                 background-color: $backgroudcolo1;
-                font-family: 'Source Code Pro', monospace;
+                font-family: $font-family;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: $tamaño5;
                 color: $color2;
                 text-align: center;
             
         
             }
             p{
-                font-family: 'Source Code Pro', monospace;
+                font-family: $font-family;
                 font-weight: bold;
             }
 
 
         }
+        
     }
 }
+
+#contacto{
+    height: auto;
+    display: grid;
+    grid-template-areas: 
+    "nombre" "apellido" "email"
+    "telefono" "codigopostal" "ciudad" 
+    "descripcion1"
+    "descripcion";
+    #nombre{
+        grid-area: "nombre";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+        
+    }
+    #apellido{
+        grid-area: "apellido";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #email{
+        grid-area: "email";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #telefono{
+        grid-area: "telefono";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #codigopostal{
+        grid-area: "codigopostal";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #ciudad{
+        grid-area: "ciudad";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #descripcion1{
+        grid-area: "descripcion1";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    #descripcion{
+        grid-template-areas: "descripcion";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+#presupuesto{
+    height: auto;
+    display: grid;
+    grid-template-areas: 
+    "nombre" "apellido" "email"
+    "telefono" "codigopostal" "ciudad" 
+    "descripcion1"
+    "descripcion";
+    #nombre{
+        grid-area: "nombre";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+        
+    }
+    #apellido{
+        grid-area: "apellido";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #email{
+        grid-area: "email";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #telefono{
+        grid-area: "telefono";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #codigopostal{
+        grid-area: "codigopostal";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #ciudad{
+        grid-area: "ciudad";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+    #descripcion1{
+        grid-area: "descripcion1";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    #descripcion{
+        grid-template-areas: "descripcion";
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
 footer{
     background-color: $backgroudcolo1;
     ul li{

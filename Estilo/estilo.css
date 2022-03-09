@@ -58,6 +58,130 @@ main section div p {
   font-weight: bold;
 }
 
+#contacto {
+  height: auto;
+  display: grid;
+  grid-template-areas: "nombre" "apellido" "email" "telefono" "codigopostal" "ciudad" "descripcion1" "descripcion";
+}
+#contacto #nombre {
+  grid-area: "nombre";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #apellido {
+  grid-area: "apellido";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #email {
+  grid-area: "email";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #telefono {
+  grid-area: "telefono";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #codigopostal {
+  grid-area: "codigopostal";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #ciudad {
+  grid-area: "ciudad";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #descripcion1 {
+  grid-area: "descripcion1";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#contacto #descripcion {
+  grid-template-areas: "descripcion";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#presupuesto {
+  height: auto;
+  display: grid;
+  grid-template-areas: "nombre" "apellido" "email" "telefono" "codigopostal" "ciudad" "descripcion1" "descripcion";
+}
+#presupuesto #nombre {
+  grid-area: "nombre";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #apellido {
+  grid-area: "apellido";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #email {
+  grid-area: "email";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #telefono {
+  grid-area: "telefono";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #codigopostal {
+  grid-area: "codigopostal";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #ciudad {
+  grid-area: "ciudad";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #descripcion1 {
+  grid-area: "descripcion1";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+#presupuesto #descripcion {
+  grid-template-areas: "descripcion";
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+}
+
 footer {
   background-color: #030303;
 }
