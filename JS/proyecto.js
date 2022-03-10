@@ -27,81 +27,105 @@ let valorHora = 1500
 let valorSeo = 50
 let valorDominio = 199
 let diasyhoras= 40
-let entrega = parseInt(document.getElementById("semmax"))
+let entrega = 5
 
+function tiempoentrega () {
+    let dato = parseInt(parent.document.getElementById ("semmax"))
+    alert(dato)
+    let texto = dato.innerText
+    return texto
+}
+
+function boton (numero){
+    alert(numero)
+    if (numero == 1){
+        calcular3()
+    }
+    else if (numero == 2){
+        calcular2()
+    }
+    else if (numero == 3){
+        calcular
+    }
+}
 function calcular () {
+    function cantidadhoras() {
+        let horas = entrega*diasyhoras*valorHora
+        return horas
+    }
+
     if (entrega>= 5){
-        function cantidadhoras() {
-            let horas = entrega*diasyhoras
-            return horas
-        }
+        cantidadhoras()
     }else {
-        alert ("El valor ingresado no es correcto")
+        alert ("La cantidad de semanas no es la aceptada. Máximo 5 semanas válido.")
             
     }
-    function valorhora(valorHora,cantidadhoras) {
-        let horasvalue = valorHora*cantidadhoras
-        return horasvalue
-    }
-
-    function testing(valorhora) {
-        let testeo = valorhora*0.9
+ 
+    function testing(cantidadhoras) {
+        let testeo = cantidadhoras*0.9
         return testeo
     }    
     const sumar = (a,b,c,d) => a+b+c+d
 
-    let total = sumar (valorhora(),valorDominio,testing(),valorSeo)
+    let total = sumar (cantidadhoras(),valorDominio,testing(),valorSeo)
     console.log(total);
  
     return total
+    
 }
+console.log(calcular());
 
 function calcular2 () {
+    function cantidadhoras() {
+        let horas = entrega*diasyhoras*valorHora
+        return horas
+    }
+
     if (entrega>= 5){
-        function cantidadhoras() {
-            let horas = entrega*diasyhoras
-            return horas
-            }
+      cantidadhoras ()
     }else {
         alert ("El valor ingresado no es correcto")
     }
-    function valorhora(a,b) {
-        return a*b
-    }
-    function valordominio() {
-        if (document.getElementById("opciones3")=document.getElementById("opciones3"))
-        alert ("El valor de dominio por mes es:" + "$199")
-    }
-    function testing(valorhora,cantidadhoras) {
-        let testeo = valorhora*cantidadhoras
+    function testing(cantidadhoras) {
+        let testeo = cantidadhoras*0.9
         return testeo
     }    
-    const sumar = (a,b,c,d) => a+b+c+d
-    let total2 = sumar (valorhora,cantidadhoras(),valorDominio,testing())
+    const sumar = (a,b,c) => a+b+c
+    let total2 = sumar (cantidadhoras(),valorDominio,testing())
 
-    function alert (valortotal2) {
-        let valortotal2 = alert ("El valor total presupuestado es: " + "$" + total2)
-        return valortotal2
-    }
-
-
-
-    
+    return total2
 }
 
 
+console.log(calcular2 ());
 
+function calcular3 () {
+    function cantidadhoras() {
+        let horas = entrega*diasyhoras*valorHora
+        return horas
+    }
 
+    if (entrega>= 5){
+      cantidadhoras ()
+    }else {
+        alert ("El valor ingresado no es correcto")
+    }
+    function testing(cantidadhoras) {
+        let testeo = cantidadhoras*0.9
+        return testeo
+    }    
+    const sumar = (a,b) => a+b
+    let total3 = sumar (cantidadhoras(),testing())
 
-
-
+    return total3
+}
 
 
 
 //Acá termmina la seccion presupuesto
 
-//Acá emmpieza la seccion de contacto
 
+//Acá emmpieza la seccion de contacto
 class   Contacto {
     constructor (nombre, apellido, motivo, descripcion){
         this.name = nombre
@@ -109,33 +133,26 @@ class   Contacto {
         this.reason = motivo
         this.description = descripcion
     }
-}
-
-
-const Contact = new Contacto(nombre = prompt("ingrese su nombre"), apellido = prompt("ingrse su apellido"), motivo = prompt("ingrese la razon de contacto"), descripcion = prompt("ingrese el motivo de contacto"));
-
-alert ("Nombre: "+ nombre + " " + "Apellido: " + apellido + " " +"Motivo: " + motivo + " " + "Texto: " + descripcion)
-
-
-
-for (const key in Contact) {
-    console.log(key, Contact[key]);
 
 }
 
-const info = ['Nombre', 'Apellido', 'Razon de contacto', 'Descripción']
+let information = [nombre = document.getElementById("nombrec"),apellido = document.getElementById("apellidoc"),motivo = document.getElementById("descripcion1"),descripcion = document.getElementById("descripcion")]
+
+const info = ["description","nombre","surname","reason","email","telefono","codigopostal","ciudad"]
 const contactar = []
 
+let datos = [nombre = document.getElementById("nombrec"),apellido = document.getElementById("apellidoc"),motivo = document.getElementById("descripcion1"),descripcion = document.getElementById("descripcion"), email = document.getElementById("emailc"), telefono = document.getElementById("telefomnoc"), codigopostal = document.getElementById("codigopostalc"), ciudad = document.getElementById("ciudadc")]
+
 for (const datos of info) {
-    let information = prompt(`Datos de contacto ${datos}`)
+    let information =`${datos}`
     information = info
-    contactar.push(new Contacto(nombre,apellido,motivo,descripcion))
+    contactar.push(new Contacto(nombre,apellido,motivo,descripcion,email,telefono,codigopostal,ciudad))
 }
 
 console.log(contactar);
 
 contactar.forEach(elemento => {
-    console.log(elemento.name);
+console.log(elemento.name);
 })
 
 const contactarmap = contactar.map((e) => {return e.description})
@@ -145,3 +162,17 @@ const razon = contactar.find(razon => razon.reason === "Consulta")
 console.log(razon);
 
 //Acá termina la seccion contacto
+
+//Acá empieza la seecioón Faqs
+
+let Faqs = document.getElementById("faqs")
+let faqs = document.getElementById("faqs2")
+let presentacion = document.getElementById("faqs1")
+presentacion.innerText = "En esta sección encontraras las preguntas que pueden responder cuestiones recurrentes. En caso de tener una consulta que no se encuentre en las respuestas a continuación, enviarla completando los datos en la sección Contacto."
+
+faqs.innerHTML = "<h4>¿Se puede solo realizar el diseño, sin el hosting y dominio?</h4> <p>Si se puede pero eso se deberá pagar aparte en caso de querer hacerlo luego.</p> <h4>¿Que pasa si contrate un producto pero luego quiero cambiar?</h4> <p>En caso de seleccionar un producto con menos opciones se ofrece la adicion de los servcios faltantes con el adicional correspondiente, men caso de querer un producto con menos servicios se analizara la situación y se llegará a un acuerdo con el cliente</p>"
+
+console.log(presentacion.innerText);
+console.log(faqs.innerHTML);
+
+//Acá termina la sección Faqs
