@@ -6,17 +6,26 @@
 
 header {
   background-color: #030303;
+  height: 50%;
 }
 
 nav {
   background-color: #030303;
 }
+nav #imagen {
+  height: 0.5%;
+  width: 3%;
+  margin-left: 0.5%;
+  margin-top: 2%;
+  margin-bottom: 0.5%;
+}
 
 ul li {
   display: inline-block;
-  margin-left: 8%;
-  padding: 0.1%;
-  margin-bottom: 0.5%;
+  margin-left: 9%;
+  margin-top: 0.5%;
+  padding: 0%;
+  margin-bottom: 2%;
 }
 ul li a {
   color: #f504c1;
