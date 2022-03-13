@@ -5,30 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Estilo/estilo.css">
+    <link rel="shortcut icon" href="./Imagenes/Logo.png" type="image/x-icon">
     <title>Inicio</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="" alt="Logo">
+            <div id="logo">
+                <a id="imagen" href="#"><img id="imagen" src="./Imagenes/Logo.png" alt="Logo"></a>
+            </div>
             <ul>
                 <li>
-                    <a href="">Inicio</a>
+                    <a href="#">Inicio</a>
                 </li>
                 <li>
-                    <a href="">Nosotros </a>
+                    <a href="#nosotros">Nosotros </a>
                 </li>
                 <li>
-                    <a href="">Productos</a>
+                    <a href="#productos">Productos</a>
                 </li>
                 <li>
-                    <a href="">Contacto</a>
+                    <a href="#contacto">Contacto</a>
                 </li>
                 <li>
-                    <a href="">Presupuesto</a>
+                    <a href="#presupuesto">Presupuesto</a>
                 </li>
                 <li>
-                    <a href="">Preguntas frecuentes</a>
+                    <a href="#faqs">Preguntas frecuentes</a>
                 </li>
             </ul>
         </nav>
@@ -49,7 +52,7 @@
         </div>
         <div id="contacto">
             <h2>Contacto</h2>
-            <form id="contactoform" action="" method="get">
+            <form id="contactoform" action="" method="post">
                 <label id="nombrec" for="nombre">Nombre</label>
                 <input type="text" id="nombrec">
                 <label id="apellidoc" for="apellido">Apellido</label>
@@ -63,6 +66,7 @@
                 <label id="ciudadc" for="city">Ciudad</label>
                 <input type="text" id="ciudadc">
                 <label id="descripcion1" for="descirpcion">Razon de contacto</label>
+                <input type="text" id="descripcion1">
                 <textarea name="descripcion" id="descripcion" cols="50" rows="10">Escribir razon por la cual contacta</textarea>
                 <button id="enviar">Enviar</button>
             </form>
@@ -90,7 +94,9 @@
                     <option  id="opciones3" value="select">Diseño web, dominio, hosting, Seo y mantención del sitio</option>
                 </select>
                 <label for="semanas">Semanas maximas de entrega</label>
-                <input type="text" id="semmax">
+                <input type="number" id="semmax">
+                <label id="calculo" for="valorfinal">Presupuesto: $</label>
+                <input id="resultado" type="text">
                 <button id="calcular">Calcular</button>
                 </form>      
         </div>
@@ -102,31 +108,36 @@
         
     </section>
     <footer>
+
         <ul>
             <li>
-                <a href="">Nosotros</a>
+                <a href="#top">Volver arriba</a>
             </li>
             <li>
-                <a href="">Productos</a>
+                <a href="#nosotros">Nosotros</a>
+            </li>
+            <li>
+                <a href="#productos">Productos</a>
 
             </li>
             <li>
-                <a href="">Comntacto</a>
+                <a href="#contacto">Contacto</a>
             </li>
             <li>
-                <a href="">Presupuesto</a>
+                <a href="#presupuesto">Presupuesto</a>
             </li>
             <li>
-                <a href="">FAQs</a>
+                <a href="#faqs">FAQs</a>
             </li>
         </ul>
                
-        
         
     </footer>
    </main>
     
 
     <script src="./JS/proyecto.js"></script>
+    <script src="./JS/presupuesto.js"></script>
+    <script src="./JS/contacto.js"></script>
 </body>
 </html>
