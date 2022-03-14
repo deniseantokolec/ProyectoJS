@@ -31,44 +31,38 @@ let valorHora = 1500
 let valorSeo = 50
 let valorDominio = 199
 let diasyhoras= 40
-let semanas = document.getElementById("semmax")
+let semanas = parseInt(document.getElementById("semmax").value)
 let producto = document.getElementById("opciones")
-let calculo = document.getElementById("resultado")
+let producto1 = document.getElementById("opciones1")
+let producto2 = document.getElementById("opciones2")
+let producto3 = document.getElementById("opciones3")
+const calculo = document.getElementById("resultado")
 const boton = document.getElementById("calcular")
+
 boton.addEventListener("click",presupuesto)
 
 function presupuesto () {
-    if (producto == [1]){
+    if (producto1 !== producto2 & producto1 !== producto3){
         calculo.innerHTML = valorHora*diasyhoras*semanas
     }
-    else if (producto == [2]){
+    else if (producto2 !== producto1 & producto2 !== producto3){
         calculo.innerHTML = valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9)
-    }
-    else if (producto == [3]){
+    }  
+    else if (producto3 !== producto2 & producto3 !== producto1){
         calculo.innerHTML = valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9)+valorSeo
     }else{
         alert("Los valores que ingreso no son los corresctos, por favor vuelva a ingresar para porder brindarle el resultado.")
     }
+    
 }
 
-
+console.log(calculo.innerHTML);
 
 //Acá termmina la seccion presupuesto
 
 
 
 //Acá emmpieza la seccion de contacto
-
-
-
-let nombre = document.getElementById("nombrec")
-let surname = document.getElementById("apellidoc")
-let reason = document.getElementById("descripcion1")
-let description = document.getElementById("descripcion")
-let email = document.getElementById("email")
-let telefono = document.getElementById("telefonoc")
-let codpost = document.getElementById("codigopostalc")
-let ciudad = document.getElementById ("ciudadc")
 
 const enviar = document.getElementById("enviar")
 enviar.addEventListener("submit",contacto)
@@ -77,16 +71,15 @@ function contacto (e) {
     console.log("Este es el comienzo del proyecto final-contacto");
     e.preventDefault()
     console.log("Se activo el Prevemnt Default");
+
 }
 
 
-formulario.addEventListener('formdata',(e) => {
-    
-    const formulario = [nombre,surname,email,telefono,codpost,ciudad,reason,description]
-    const datos = formulario.innerHTML.value
-    datos.innerText = e
-    console.log(e);
-})    
+
+
+
+
+
 
 
 //Acá termina la seccion contacto
@@ -104,3 +97,23 @@ console.log(presentacion.innerText);
 console.log(faqs.innerHTML);
 
 //Acá termina la sección Faqs
+
+//chat box
+function gettime() {
+    let today = new Date()
+    hours = today.getHours()
+    minutes = today.getMinutes()
+    
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    let time = hours + ":" + minutes;
+    return time
+}
+function firstBotMessage () {
+    let firstMessage = "Hola! ¿En que puedo ayudarte?"
+    document.getElementsByClassName("client-chat").innerHTML='<p class= "botText"><Span>'+ firstMessage + '<Span></p>';
+}

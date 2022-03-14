@@ -191,6 +191,129 @@ main section div p {
   font-weight: bold;
 }
 
+.chat-box {
+  width: 400px;
+  height: 450px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.client {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 80px;
+  background-color: #d16ba5;
+}
+
+.client img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.client-info {
+  color: #fdfdfd;
+  padding: 15px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.client-info p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.chats {
+  width: 360px;
+  padding: 0 15px;
+  color: #fff;
+  position: relative;
+  font-size: 0.9em;
+}
+
+.client-chat {
+  width: 200px;
+  word-wrap: break-word;
+  background-color: #aa8fd8;
+  padding: 7px 10px;
+  border-radius: 10px 10px 10px 0;
+  margin: 10px 0;
+}
+
+.my-chat {
+  width: 200px;
+  word-wrap: break-word;
+  background-color: #d16ba5;
+  padding: 7px 10px;
+  border-radius: 10px 10px 0 10px;
+  margin: 5px 0 5px auto;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 65px;
+  background-color: #fff;
+  padding: 15px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.chat-input input {
+  width: calc(100% - 40px);
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+  color: #000;
+  font-size: 1.2em;
+  padding: 0 15px;
+}
+
+.send-btn {
+  width: 60px;
+  height: 40px;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.send-btn:active {
+  transform: scale(0.85);
+}
+
+.chat-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  bottom: 20px;
+}
+
+.chat-icon {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  transition: ease-in-out;
+}
+
+.chat-icon:hover {
+  transform: rotate(30deg);
+}
+
 footer {
   background-color: #030303;
 }
