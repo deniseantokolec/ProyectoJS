@@ -52,7 +52,7 @@
             </div>
             <div id="contacto">
                 <h2>Contacto</h2>
-                <form id="contactoform" action="" method="post">
+                <form id="contactoform" action="" method="">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombrec">
                     <label for="apellido">Apellido</label>
@@ -73,7 +73,8 @@
             </div>
             <div id="presupuesto">
                 <h2>Presupuesto</h2>
-                <form id="presupuestoform" action="" method="get">
+                <div id="presupuestotext"></div>
+                <form id="presupuestoform"  action="" method="">
                     <input type="text">
                         <label for="nombre">Nombre</label>
                     <input type="text">
@@ -89,16 +90,19 @@
                     <input type="text" name="city" id="ciudad">
                         <label for="select">Sleccionar opción de producto</label>
                     <select name="select" id="opciones">
-                        <option id="seleccionar" value="select">Seleccionar...</option> 
-                        <option  id="opciones1" value="select">Solo diseño de web</option>
-                        <option  id="opciones2" value="select">Diseño de web, dominio y hosting</option>
-                        <option  id="opciones3" value="select">Diseño web, dominio, hosting, Seo y mantención del sitio</option>
+                        <option for="select">Seleccionar....</option>
+                        <option for="select">Solo diseño</option> 
+                        <option for="select">Diseño, Dominio, Testing</option>
+                        <option for="select">Diseño, Dominiom, Testing, Seo</option>
                     </select>
                         <label for="semanas">Semanas maximas de entrega</label>
                     <input type="number" id="semmax">
                         <label id="calculo" for="valorfinal">Presupuesto: $</label>
-                    <input id="resultado" type="text">
-                    <button id="calcular">Calcular</button>
+                    <output id="resultado" for=""></output>
+                    <button id="calcular" type="button">Calcular</button><br>
+                    <label for="newpresup">Si no encuentra producto, describa detalle de pedido:</label><br>
+                    <textarea name="newpresup" id="pedido" cols="30" rows="10"></textarea><br>
+                    <button id="envio" type="submit">Pedir presupuesto</button>
                     </form>      
             </div>
             <div id="faqs">

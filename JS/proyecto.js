@@ -2,7 +2,6 @@ console.log("Este es el comienzo del proyecto final-otras secciones");
 
 //Aca empieza la seccion nosotros
 
-let nosotros = document.getElementById("nosotros")
 let parrafo1 = document.getElementById("nosotrostexto")
 parrafo1.innerText = "Net Web es una empresa dedicada al desarrollo web fundada por Denise Antokolec. Inicio su carrera en el mundo de la programación luego de recibirse de Licenciada en Administración de empresas, buscando una salida laboral que le permita desafiar la imaginación y el pensamiento en el día a día. Por eso realizó en Code House los cursos de Desarrollo Web y Javascript para poder brindar a sus clientes lo que buscan en base a sus necesidades y las de los usuarios de sus páginas web, considerando sus comnocimientos empresariales teniendo asi la posibilidad de aportar valor."
 
@@ -16,6 +15,10 @@ console.log(parrafo1.innerText);
 //Acá empieza la seccion presupuesto
 
 console.log("Este es el comienzo del proyecto final-presupuesto");
+let presup = document.getElementById("presupuestotext")
+
+presup.innerHTML = "<p>En esta seccion podrás pedir tu presupuesto en base a los productos que ofrecemos. Si quieres otro producto te invito a que nos envies un mensaje con la descripción del trabajo a realizar para poder enviar el mismo.</p>"
+
 
 //1. pedir periodo máximo de entrega
 //2. calcular el precio de armar web con el valor ingresado + constante valor hora
@@ -31,60 +34,72 @@ let valorHora = 1500
 let valorSeo = 50
 let valorDominio = 199
 let diasyhoras= 40
-let semanas = parseInt(document.getElementById("semmax").value)
+let semanas = parseFloat(document.getElementById("semmax").value)
 let producto = document.getElementById("opciones")
-let producto1 = document.getElementById("opciones1")
-let producto2 = document.getElementById("opciones2")
-let producto3 = document.getElementById("opciones3")
 const calculo = document.getElementById("resultado")
 const boton = document.getElementById("calcular")
 
-boton.addEventListener("click",presupuesto)
+//Se realizara evemnto para poder mediante la elecciomn de producto y cantidad de semanmas para la emtrega el presupuesto final, el cual se expondrá en el imput id: resultado.
+
+boton.addEventListener('click', (e) =>{
+    e.preventDefault()
+    presupuesto()
+    console.log('Presupuesto $: ' + resultado);
+    
+})
+let resultado = calculo.value
+ 
 
 function presupuesto () {
-    if (producto1 !== producto2 & producto1 !== producto3){
-        calculo.innerHTML = valorHora*diasyhoras*semanas
+    if (producto == producto[1].innerHTML){
+        calculo.innerHTML = (valorHora*diasyhoras*semanas)
     }
-    else if (producto2 !== producto1 & producto2 !== producto3){
-        calculo.innerHTML = valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9)
+    else if (producto == producto[2].innerHTML){
+        calculo.innerHTML = (valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9))
     }  
-    else if (producto3 !== producto2 & producto3 !== producto1){
-        calculo.innerHTML = valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9)+valorSeo
+    else if (producto == producto[3].innerHTML){
+        calculo.innerHTML = (valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9)+valorSeo)
     }else{
-        alert("Los valores que ingreso no son los corresctos, por favor vuelva a ingresar para porder brindarle el resultado.")
+        calculo.innerHTML= '<p>Si encuentra que no esta lo que requiere pase a la dejar una descripcion de lo que desea</p>'
     }
-    
+    console.log(calculo.value);
 }
 
-console.log(calculo.innerHTML);
+let nuevo = document.getElementById("pedido")
+let btn = document.getElementById("envio")
 
+btn.addEventListener('click', (e)=>{
+    e.preventDefault()
+    nuevo.innerHTML
+    console.log(nuevo.value);
+})
+
+console.log(semanas);
+ 
 //Acá termmina la seccion presupuesto
 
 
 
 //Acá emmpieza la seccion de contacto
+console.log('Este es el comienza del proyecto final - Contacto');
+
 
 const enviar = document.getElementById("enviar")
-enviar.addEventListener("submit",contacto)
+enviar.addEventListener("click",contacto)
+const contactoform = [{nombre: document.getElementById("nombrec").innerHTML,apellido: document.getElementById("apellidoc").innerHTML,email: document.getElementById("emailc").innerHTML,telefono: document.getElementById("telefonoc").innerHTML,codpost:document.getElementById("codigopostalc").innerHTML,ciudad: document.getElementById("ciudadc").innerHTML,razon: document.getElementById("descripcion1").innerHTML,motivo: document.getElementById("descripcion").innerHTML}]
 
 function contacto (e) {
-    console.log("Este es el comienzo del proyecto final-contacto");
     e.preventDefault()
     console.log("Se activo el Prevemnt Default");
-
+    console.log('Los datos de contacto son los siguientes: ' + contactoform.forEach((e)=>{console.log(e);}));
+    console.log('Los datos de contacto son los siguientes: ' + contactoform.entries())
 }
-
-
-
-
-
-
-
 
 
 //Acá termina la seccion contacto
 
 //Acá empieza la seecioón Faqs
+console.log('Este es el comienza del proyecto final - Faqs');
 
 let Faqs = document.getElementById("faqs")
 let faqs = document.getElementById("faqs2")
