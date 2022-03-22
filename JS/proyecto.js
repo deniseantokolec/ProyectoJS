@@ -34,36 +34,54 @@ let valorHora = 1500
 let valorSeo = 50
 let valorDominio = 199
 let diasyhoras= 40
-let semanas = parseFloat(document.getElementById("semmax").value)
-let producto = document.getElementById("opciones")
+let semanas = document.getElementById("semmax").value
+let producto = document.getElementById("opciones").value
 const calculo = document.getElementById("resultado")
 const boton = document.getElementById("calcular")
+const log = document.getElementById("valores").innerHTML
+
+let entrega = Number(semanas)
+
+
+//let tiempo;
+//tiempo = parseFloat(semanas.value)
+//tiempo = semanas.valueAsNumber
+
+// semanas.addEventListener('input',(e) => {  
+//     log.textContent = e.srcElement.value
+//     console.log(log);
+// })
 
 //Se realizara evemnto para poder mediante la elecciomn de producto y cantidad de semanmas para la emtrega el presupuesto final, el cual se expondrá en el imput id: resultado.
 
 boton.addEventListener('click', (e) =>{
     e.preventDefault()
-    presupuesto()
+    alert (opciones)
+    presupuesto(producto)
     console.log('Presupuesto $: ' + resultado);
     
 })
 let resultado = calculo.value
  
 
-function presupuesto () {
-    if (producto == producto[1].innerHTML){
-        calculo.innerHTML = (valorHora*diasyhoras*semanas)
+function presupuesto (producto) {
+ 
+
+    alert(producto)
+    if (producto == 2){
+        calculo.innerHTML = (valorHora*diasyhoras*entrega)
     }
-    else if (producto == producto[2].innerHTML){
-        calculo.innerHTML = (valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9))
+    else if (producto == 3){
+        calculo.innerHTML = (valorHora*diasyhoras*entrega+valorDominio+((valorHora*diasyhoras*entrega)*0.9))
     }  
-    else if (producto == producto[3].innerHTML){
-        calculo.innerHTML = (valorHora*diasyhoras*semanas+valorDominio+((valorHora*diasyhoras*semanas)*0.9)+valorSeo)
+    else if (producto == 4){
+        calculo.innerHTML = (valorHora*diasyhoras*entrega+valorDominio+((valorHora*diasyhoras*entrega)*0.9)+valorSeo)
     }else{
         calculo.innerHTML= '<p>Si encuentra que no esta lo que requiere pase a la dejar una descripcion de lo que desea</p>'
     }
     console.log(calculo.value);
 }
+
 
 let nuevo = document.getElementById("pedido")
 let btn = document.getElementById("envio")
@@ -74,7 +92,7 @@ btn.addEventListener('click', (e)=>{
     console.log(nuevo.value);
 })
 
-console.log(semanas);
+console.log(entrega);
  
 //Acá termmina la seccion presupuesto
 
@@ -84,17 +102,33 @@ console.log(semanas);
 console.log('Este es el comienza del proyecto final - Contacto');
 
 
+
 const enviar = document.getElementById("enviar")
 enviar.addEventListener("click",contacto)
-const contactoform = [{nombre: document.getElementById("nombrec").innerHTML,apellido: document.getElementById("apellidoc").innerHTML,email: document.getElementById("emailc").innerHTML,telefono: document.getElementById("telefonoc").innerHTML,codpost:document.getElementById("codigopostalc").innerHTML,ciudad: document.getElementById("ciudadc").innerHTML,razon: document.getElementById("descripcion1").innerHTML,motivo: document.getElementById("descripcion").innerHTML}]
+const contactoform = [{id: 1, nombre: document.getElementById("nombrec").innerText},
+                     {id: 2, apellido: document.getElementById("apellidoc").innerText},
+                     {id: 3, email: document.getElementById("emailc").innerText},
+                     {id: 4, telefono: document.getElementById("telefonoc").innerText},
+                     {id:5, codpost:document.getElementById("codigopostalc").innerText},
+                     {id: 6, ciudad: document.getElementById("ciudadc").innerText},
+                     {id: 7, razon: document.getElementById("descripcion1").innerText},
+                     {id: 8, motivo: document.getElementById("descripcion").innerText}];
 
 function contacto (e) {
     e.preventDefault()
     console.log("Se activo el Prevemnt Default");
-    console.log('Los datos de contacto son los siguientes: ' + contactoform.forEach((e)=>{console.log(e);}));
-    console.log('Los datos de contacto son los siguientes: ' + contactoform.entries())
 }
 
+//import {datajason} from './data.js'
+
+const contactojason = JSON.stringify(contactoform)
+console.log(contactojason);
+console.log(typeof contactoform);
+console.log(typeof contactojason);
+localStorage.setItem('contacto',contactojason)
+
+const datos = JSON.parse(localStorage.getItem('contacto'))
+console.log(datos);
 
 //Acá termina la seccion contacto
 

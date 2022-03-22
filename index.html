@@ -89,14 +89,15 @@
                         <label for="city">Ciudad</label>
                     <input type="text" name="city" id="ciudad">
                         <label for="select">Sleccionar opción de producto</label>
-                    <select name="select" id="opciones">
-                        <option for="select">Seleccionar....</option>
-                        <option for="select">Solo diseño</option> 
-                        <option for="select">Diseño, Dominio, Testing</option>
-                        <option for="select">Diseño, Dominiom, Testing, Seo</option>
+                    <select name="opciones" id="opciones">
+                        <option for="opciones" value="1">Seleccionar....</option>
+                        <option for="opciones" value="2">Solo diseño</option> 
+                        <option for="opciones" value="3">Diseño, Dominio, Testing</option>
+                        <option for="opciones" value="4">Diseño, Dominiom, Testing, Seo</option>
                     </select>
                         <label for="semanas">Semanas maximas de entrega</label>
                     <input type="number" id="semmax">
+                    <p id="valores" aria-hidden="true"></p>
                         <label id="calculo" for="valorfinal">Presupuesto: $</label>
                     <output id="resultado" for=""></output>
                     <button id="calcular" type="button">Calcular</button><br>
