@@ -1,1 +1,0 @@
-export const datajason = '[{"id":1,"nombre":""},{"id":2,"apellido":""},{"id":3,"email":""},{"id":4,"telefono":""},{"id":5,"codpost":""},{"id":6,"ciudad":""},{"id":7,"razon":""},{"id":8,"motivo":"Escribir razon por la cual contacta"}]'

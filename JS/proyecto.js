@@ -34,48 +34,46 @@ let valorHora = 1500
 let valorSeo = 50
 let valorDominio = 199
 let diasyhoras= 40
-let semanas = document.getElementById("semmax").value
-let producto = document.getElementById("opciones").value
+let semanas = document.getElementById("semmax")
+let producto = document.getElementById("opciones")
 const calculo = document.getElementById("resultado")
 const boton = document.getElementById("calcular")
-const log = document.getElementById("valores").innerHTML
 
-let entrega = Number(semanas)
+let entrega
+semanas.onchange = (m) => {
+    entrega = m.target.value
+    console.log(entrega);
+}
+let semmax = parseInt(entrega)
+console.log(semmax);
+let valorinput
+producto.onchange = (j) => {
+    valorinput = j.target.value
+    console.log(valorinput);
+}
 
+//Se realizara evento para poder mediante la eleccion de producto y cantidad de semanas para la entrega el presupuesto final, el cual se expondrá en el input id: resultado.
 
-//let tiempo;
-//tiempo = parseFloat(semanas.value)
-//tiempo = semanas.valueAsNumber
-
-// semanas.addEventListener('input',(e) => {  
-//     log.textContent = e.srcElement.value
-//     console.log(log);
-// })
-
-//Se realizara evemnto para poder mediante la elecciomn de producto y cantidad de semanmas para la emtrega el presupuesto final, el cual se expondrá en el imput id: resultado.
+let resultado = calculo.value
 
 boton.addEventListener('click', (e) =>{
     e.preventDefault()
-    alert (opciones)
-    presupuesto(producto)
+    presupuesto()
     console.log('Presupuesto $: ' + resultado);
     
 })
-let resultado = calculo.value
- 
 
-function presupuesto (producto) {
- 
 
-    alert(producto)
-    if (producto == 2){
-        calculo.innerHTML = (valorHora*diasyhoras*entrega)
+
+function presupuesto () {
+    if (valorinput == valorinput[2]){
+        calculo.innerHTML = (valorHora*diasyhoras*semmax)
     }
-    else if (producto == 3){
-        calculo.innerHTML = (valorHora*diasyhoras*entrega+valorDominio+((valorHora*diasyhoras*entrega)*0.9))
+    else if (valorinput == valorinput[3]){
+        calculo.innerHTML = (valorHora*diasyhoras*semmax+valorDominio+((valorHora*diasyhoras*semmax)*0.9))
     }  
-    else if (producto == 4){
-        calculo.innerHTML = (valorHora*diasyhoras*entrega+valorDominio+((valorHora*diasyhoras*entrega)*0.9)+valorSeo)
+    else if (valorinput == valorinput[4]){
+        calculo.innerHTML = (valorHora*diasyhoras*semmax+valorDominio+((valorHora*diasyhoras*semmax)*0.9)+valorSeo)
     }else{
         calculo.innerHTML= '<p>Si encuentra que no esta lo que requiere pase a la dejar una descripcion de lo que desea</p>'
     }
@@ -92,7 +90,7 @@ btn.addEventListener('click', (e)=>{
     console.log(nuevo.value);
 })
 
-console.log(entrega);
+
  
 //Acá termmina la seccion presupuesto
 
@@ -101,25 +99,72 @@ console.log(entrega);
 //Acá emmpieza la seccion de contacto
 console.log('Este es el comienza del proyecto final - Contacto');
 
+const nombre = document.getElementById("nombrec")
+const apellido = document.getElementById("apellidoc")
+const email = document.getElementById("emailc")
+const telefono = document.getElementById("telefonoc")
+const codpost = document.getElementById("codigopostalc")
+const ciudad = document.getElementById("ciudadc")
+const razon = document.getElementById("descripcion1")
+const motivo = document.getElementById("descripcion")
+
+
+
+let identidad
+nombre.onchange = (e) => {
+    identidad = e.target.value
+    console.log(identidad);
+}
+let surname
+apellido.onchange = (e) => {
+    surname = e.target.value
+    console.log(surname);
+}
+let mail
+email.onchange = (e) => {
+    mail = e.target.value
+    console.log(mail);
+}
+let telephone
+telefono.onchange = (e) => {
+    telephone = e.target.value
+    console.log(telephone);
+}
+let CP
+codpost.onchange = (e) => {
+    CP= e.target.value
+    console.log(CP);
+}
+let city
+ciudad.onchange = (e) => {
+    city = e.target.value
+    console.log(city);
+}
+let reason
+razon.onchange = (e) => {
+    reason = e.target.value
+    console.log(reason);
+}
+let motive
+motivo.onchange = (e) => {
+    motive = e.target.value
+    console.log(motive);
+}
+
+const contactoform = [nombre, apellido, email, telefono, codpost, ciudad, razon, motivo]
 
 
 const enviar = document.getElementById("enviar")
 enviar.addEventListener("click",contacto)
-const contactoform = [{id: 1, nombre: document.getElementById("nombrec").innerText},
-                     {id: 2, apellido: document.getElementById("apellidoc").innerText},
-                     {id: 3, email: document.getElementById("emailc").innerText},
-                     {id: 4, telefono: document.getElementById("telefonoc").innerText},
-                     {id:5, codpost:document.getElementById("codigopostalc").innerText},
-                     {id: 6, ciudad: document.getElementById("ciudadc").innerText},
-                     {id: 7, razon: document.getElementById("descripcion1").innerText},
-                     {id: 8, motivo: document.getElementById("descripcion").innerText}];
-
-function contacto (e) {
-    e.preventDefault()
+function contacto (i) {
+    i.preventDefault()
     console.log("Se activo el Prevemnt Default");
+    const existe = contactoform.find(x => x.identidad === nombre)
+    existe ? console.log('Los datos ingresados son: ' + (existe)) : console.log('Ingresar los datos requeridos');
+
 }
 
-//import {datajason} from './data.js'
+
 
 const contactojason = JSON.stringify(contactoform)
 console.log(contactojason);
@@ -127,8 +172,8 @@ console.log(typeof contactoform);
 console.log(typeof contactojason);
 localStorage.setItem('contacto',contactojason)
 
-const datos = JSON.parse(localStorage.getItem('contacto'))
-console.log(datos);
+// const datos = JSON.parse(localStorage.getItem('contacto'))
+
 
 //Acá termina la seccion contacto
 
