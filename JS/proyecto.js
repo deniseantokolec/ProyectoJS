@@ -5,7 +5,7 @@ console.log("Este es el comienzo del proyecto final-otras secciones");
 let parrafo1 = document.getElementById("nosotrostexto")
 parrafo1.innerText = "Net Web es una empresa dedicada al desarrollo web fundada por Denise Antokolec. Inicio su carrera en el mundo de la programación luego de recibirse de Licenciada en Administración de empresas, buscando una salida laboral que le permita desafiar la imaginación y el pensamiento en el día a día. Por eso realizó en Code House los cursos de Desarrollo Web y Javascript para poder brindar a sus clientes lo que buscan en base a sus necesidades y las de los usuarios de sus páginas web, considerando sus comnocimientos empresariales teniendo asi la posibilidad de aportar valor."
 
-console.log(parrafo1.innerText);
+//console.log(parrafo1.innerText);
 
 //Aca termina la seccion nosotros
 
@@ -29,52 +29,32 @@ presup.innerHTML = "<p>En esta seccion podrás pedir tu presupuesto en base a lo
 //7. dar precio de SEO
 //8. precio final
 
+//Se realizara evento para poder mediante la eleccion de producto y cantidad de semanas para la entrega el presupuesto final, el cual se expondrá en el input id: resultado.
 
-let valorHora = 1500
-let valorSeo = 50
-let valorDominio = 199
-let diasyhoras= 40
-let semanas = document.getElementById("semmax")
-let producto = document.getElementById("opciones")
 const calculo = document.getElementById("resultado")
 const boton = document.getElementById("calcular")
 
-let entrega
-semanas.onchange = (m) => {
-    entrega = m.target.value
-    console.log(entrega);
-}
-let semmax = parseInt(entrega)
-console.log(semmax);
-let valorinput
-producto.onchange = (j) => {
-    valorinput = j.target.value
-    console.log(valorinput);
-}
-
-//Se realizara evento para poder mediante la eleccion de producto y cantidad de semanas para la entrega el presupuesto final, el cual se expondrá en el input id: resultado.
-
-let resultado = calculo.value
 
 boton.addEventListener('click', (e) =>{
     e.preventDefault()
     presupuesto()
-    console.log('Presupuesto $: ' + resultado);
+    console.log('Presupuesto $: ' + calculo.innerText);
+
     
 })
 
 
 
 function presupuesto () {
-    if (valorinput == valorinput[2]){
-        calculo.innerHTML = (valorHora*diasyhoras*semmax)
+
+    if (valorinput() === 2){
+       calculo.innerHTML = this.producto1
+    }else if (valorinput() === 3){
+        calculo.innerHTML = this.producto2
+    }else if (valorinput() === 4){
+        calculo.innerHTML = this.producto3
     }
-    else if (valorinput == valorinput[3]){
-        calculo.innerHTML = (valorHora*diasyhoras*semmax+valorDominio+((valorHora*diasyhoras*semmax)*0.9))
-    }  
-    else if (valorinput == valorinput[4]){
-        calculo.innerHTML = (valorHora*diasyhoras*semmax+valorDominio+((valorHora*diasyhoras*semmax)*0.9)+valorSeo)
-    }else{
+    else{
         calculo.innerHTML= '<p>Si encuentra que no esta lo que requiere pase a la dejar una descripcion de lo que desea</p>'
     }
     console.log(calculo.value);
@@ -99,6 +79,7 @@ btn.addEventListener('click', (e)=>{
 //Acá emmpieza la seccion de contacto
 console.log('Este es el comienza del proyecto final - Contacto');
 
+const form = document.getElementById("contactoform")
 const nombre = document.getElementById("nombrec")
 const apellido = document.getElementById("apellidoc")
 const email = document.getElementById("emailc")
@@ -108,71 +89,72 @@ const ciudad = document.getElementById("ciudadc")
 const razon = document.getElementById("descripcion1")
 const motivo = document.getElementById("descripcion")
 
+class contactos {
+    constructor (){
+        this.identidad = nombre.value
+        this.surname = apellido.value
+        this.mail = email.value
+        this.telephone = telefono.value
+        this.CP = codpost.value
+        this.city = ciudad.value
+        this.reason = razon.value
+        this.motive = motivo.value
+    }
+}
 
 
-let identidad
 nombre.onchange = (e) => {
-    identidad = e.target.value
+    this.identidad = e.target.value
     console.log(identidad);
 }
-let surname
+
 apellido.onchange = (e) => {
-    surname = e.target.value
+    this.surname = e.target.value
     console.log(surname);
 }
-let mail
+
 email.onchange = (e) => {
-    mail = e.target.value
+    this.mail = e.target.value
     console.log(mail);
 }
-let telephone
+
 telefono.onchange = (e) => {
-    telephone = e.target.value
+   this.telephone = e.target.value
     console.log(telephone);
 }
-let CP
+
 codpost.onchange = (e) => {
-    CP= e.target.value
+    this.CP= e.target.value
     console.log(CP);
 }
-let city
+
 ciudad.onchange = (e) => {
-    city = e.target.value
+    this.city = e.target.value
     console.log(city);
 }
-let reason
+
 razon.onchange = (e) => {
-    reason = e.target.value
+    this.reason = e.target.value
     console.log(reason);
 }
-let motive
+
 motivo.onchange = (e) => {
-    motive = e.target.value
+    this.motive = e.target.value
     console.log(motive);
 }
 
-const contactoform = [nombre, apellido, email, telefono, codpost, ciudad, razon, motivo]
+
 
 
 const enviar = document.getElementById("enviar")
 enviar.addEventListener("click",contacto)
 function contacto (i) {
     i.preventDefault()
-    console.log("Se activo el Prevemnt Default");
-    const existe = contactoform.find(x => x.identidad === nombre)
-    existe ? console.log('Los datos ingresados son: ' + (existe)) : console.log('Ingresar los datos requeridos');
+    console.log("Se activo el Prevent Default");
+    console.log(new contactos());
 
 }
 
-
-
-const contactojason = JSON.stringify(contactoform)
-console.log(contactojason);
-console.log(typeof contactoform);
-console.log(typeof contactojason);
-localStorage.setItem('contacto',contactojason)
-
-// const datos = JSON.parse(localStorage.getItem('contacto'))
 
 
 //Acá termina la seccion contacto
@@ -187,8 +169,8 @@ presentacion.innerText = "En esta sección encontraras las preguntas que pueden 
 
 faqs.innerHTML = "<h4>¿Se puede solo realizar el diseño, sin el hosting y dominio?</h4> <p>Si se puede pero eso se deberá pagar aparte en caso de querer hacerlo luego.</p> <h4>¿Que pasa si contrate un producto pero luego quiero cambiar?</h4> <p>En caso de seleccionar un producto con menos opciones se ofrece la adicion de los servcios faltantes con el adicional correspondiente, men caso de querer un producto con menos servicios se analizara la situación y se llegará a un acuerdo con el cliente</p>"
 
-console.log(presentacion.innerText);
-console.log(faqs.innerHTML);
+//console.log(presentacion.innerText);
+//console.log(faqs.innerHTML);
 
 //Acá termina la sección Faqs
 
