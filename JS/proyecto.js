@@ -1,4 +1,25 @@
 console.log("Este es el comienzo del proyecto final-otras secciones");
+AOS.init({
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+});
+AOS.refresh()
+
+document.addEventListener('aos:in', ({ detail }) => {
+    console.log('animated in', detail);
+});
+  
+  document.addEventListener('aos:out', ({ detail }) => {
+    console.log('animated out', detail);
+});
+
+
 
 //Aca empieza la seccion nosotros
 
@@ -142,8 +163,7 @@ motivo.onchange = (e) => {
     this.motive = e.target.value
     console.log(motive);
 }
-
-
+  
 
 
 const enviar = document.getElementById("enviar")
@@ -152,6 +172,27 @@ function contacto (i) {
     i.preventDefault()
     console.log("Se activo el Prevent Default");
     console.log(new contactos());
+    
+    Swal.fire({
+        title: '¿Desea enviar los datos de contacto ingresados?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Enviar',
+        denyButtonText: `No Enviar`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Enviado!', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Los datos no se enviaron', '', 'info')
+        }
+    })
+
+    const contactojason = JSON.stringify(new contactos)
+    console.log(contactojason);
+    const datos = localStorage.setItem('contacto',contactojason)
+
+    
 
 }
 

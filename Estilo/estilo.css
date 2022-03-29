@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+[data-aos] {
+  visibility: visible;
+}
+
+[data-aos].animated {
+  visibility: visible;
+}
+
 header {
   background-color: #030303;
   height: 50%;

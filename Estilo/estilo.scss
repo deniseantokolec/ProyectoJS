@@ -24,6 +24,13 @@ $tamaño5:20px;
 $tañano6:50px;
 
 
+[data-aos] {
+    visibility: visible;
+  }
+  [data-aos].animated {
+    visibility: visible;
+  }
+
 header{
     background-color: $backgroudcolo1;
     height: 50%;
