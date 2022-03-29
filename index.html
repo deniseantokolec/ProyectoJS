@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Estilo/estilo.css">
     <link rel="shortcut icon" href="./Imagenes/Logo.png" type="image/x-icon">
-    <title>Inicio</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Net Web</title>
 </head>
 <body>
+    <div data-aos="fade-in" data-aos-offset="50" data-aos-delay="50" data-aos-duration="4000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center"></div>
     <header>
         <nav>
-            <div id="logo">
+            <div id="logo"  >
                 <a id="imagen" href="#"><img id="imagen" src="./Imagenes/Logo.png" alt="Logo"></a>
             </div>
             <ul>
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="#inicio">Inicio</a>
                 </li>
                 <li>
                     <a href="#nosotros">Nosotros </a>
@@ -38,19 +42,19 @@
         
     </header>
    <main>
-        <div>
+        <div id="inicio" data-aos="fade-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
             <h1>Net web</h1>
         </div>
         <section>
-            <div id="nosotros">
+            <div id="nosotros" data-aos="fade-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out-sine" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Nosotros</h2>
                 <p id="nosotrostexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam repellendus eius tempore iure, nulla repudiandae at in est nihil ullam amet inventore quibusdam culpa, commodi vel cupiditate sit voluptatum!</p>
             </div>
-            <div id="productos">
+            <div id="productos" data-aos="fade-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out-sine" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Productos</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam repellendus eius tempore iure, nulla repudiandae at in est nihil ullam amet inventore quibusdam culpa, commodi vel cupiditate sit voluptatum!</p>
             </div>
-            <div id="contacto">
+            <div id="contacto" data-aos="fade-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out-sine" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Contacto</h2>
                 <form id="contactoform" action="" method="">
                     <label for="nombre">Nombre</label>
@@ -71,9 +75,9 @@
                     <button id="enviar">Enviar</button>
                 </form>
             </div>
-            <div id="presupuesto">
+            <div id="presupuesto" data-aos="fade-in" data-aos-offset="200" data-aos-delay="50"      data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Presupuesto</h2>
-                <div id="presupuestotext"></div>
+                <p id="presupuestotext"></p>
                 <form id="presupuestoform"  action="" method="">
                     <input type="text">
                         <label for="nombre">Nombre</label>
@@ -106,7 +110,7 @@
                     <button id="envio" type="submit">Pedir presupuesto</button>
                     </form>      
             </div>
-            <div id="faqs">
+            <div id="faqs" data-aos="fade-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Preguntas frecuentes</h2>
                 <p id="faqs1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam repellendus eius tempore iure, nulla repudiandae at in est nihil ullam amet inventore quibusdam culpa, commodi vel cupiditate sit voluptatum!</p>
                 <div id="faqs2"></div>
@@ -140,7 +144,6 @@
         </div>
 
         <footer>
-
             <ul>
                 <li>
                     <a href="#top">Volver arriba</a>
