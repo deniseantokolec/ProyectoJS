@@ -15,9 +15,9 @@ document.addEventListener('aos:in', ({ detail }) => {
     console.log('animated in', detail);
 });
   
-  document.addEventListener('aos:out', ({ detail }) => {
-    console.log('animated out', detail);
-});
+  //document.addEventListener('aos:out', ({ detail }) => {
+    //console.log('animated out', detail);
+//});
 
 
 
@@ -67,18 +67,29 @@ boton.addEventListener('click', (e) =>{
 
 
 function presupuesto () {
+  const presupuestojason = JSON.stringify(new presupuestado1)
+  console.log(presupuestojason);
+  const valores = localStorage.setItem('presupuesto1',presupuestojason)
+  console.log(valores);
+  const valor = JSON.parse(localStorage.getItem('presupuesto1'))
+  console.log(valor);
+  let numero = parseInt(this.valorinput)
+  console.log(numero);
+  let numero2 = parseInt(this.semmax)
+  console.log(numero2);
+  
 
-    if (valorinput() === 2){
-       calculo.innerHTML = this.producto1
-    }else if (valorinput() === 3){
-        calculo.innerHTML = this.producto2
-    }else if (valorinput() === 4){
-        calculo.innerHTML = this.producto3
-    }
-    else{
-        calculo.innerHTML= '<p>Si encuentra que no esta lo que requiere pase a la dejar una descripcion de lo que desea</p>'
-    }
-    console.log(calculo.value);
+  if (numero = 2){
+    calculo.innerHTML = (valorHora*diasyhoras*numero2)
+  }else if (numero = 3) {
+    calculo.innerHTML = (valorHora*diasyhoras*numero2+(valorHora*diasyhoras*numero2)*porcentaje+valorDominio)
+  }else if (numero = 4){
+    calculo.innerHTML = (valorHora*diasyhoras*numero2+(valorHora*diasyhoras*numero2)*porcentaje+valorDominio+valorSeo)
+  }else{
+    calculo.innerHTML= '<p>Si encuentra que no esta lo que requiere pase a la dejar una descripcion de lo que desea</p>'
+  }
+
+  return   console.log(calculo.value);
 }
 
 
@@ -191,6 +202,7 @@ function contacto (i) {
     const contactojason = JSON.stringify(new contactos)
     console.log(contactojason);
     const datos = localStorage.setItem('contacto',contactojason)
+    console.log(datos);
 
     
 
