@@ -228,21 +228,6 @@ faqs.innerHTML = "<h4>¿Se puede solo realizar el diseño, sin el hosting y domi
 //Acá termina la sección Faqs
 
 //chat box
-function gettime() {
-    let today = new Date()
-    hours = today.getHours()
-    minutes = today.getMinutes()
-    
-    if (hours < 10) {
-        hours = "0" + hours;
-    }
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-    let time = hours + ":" + minutes;
-    return time
-}
-function firstBotMessage () {
-    let firstMessage = "Hola! ¿En que puedo ayudarte?"
-    document.getElementsByClassName("client-chat").innerHTML='<p class= "botText"><Span>'+ firstMessage + '<Span></p>';
-}
+
+
+
