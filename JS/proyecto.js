@@ -121,6 +121,25 @@ const ciudad = document.getElementById("ciudadc")
 const razon = document.getElementById("descripcion1")
 const motivo = document.getElementById("descripcion")
 
+const URL = 'http://api.countrylayer.com/v2/all?access_key=c14ffaa1fb205e08c55d841f677fdfb2'
+
+fetch (URL)
+  
+  .then((response) => response.json())
+  .then(dat=> {
+      let paises = document.getElementById("paisesc")
+      paises.innerHTML= null
+      dat.forEach(p => {
+        console.log(p.name);
+        let select = document.createElement('li')
+        select.innerHTML= p.name
+        paises.appendChild('li')
+        
+      });
+  
+  })
+
+
 class contactos {
     constructor (){
         this.identidad = nombre.value
@@ -163,6 +182,7 @@ codpost.onchange = (e) => {
 ciudad.onchange = (e) => {
     this.city = e.target.value
     console.log(city);
+
 }
 
 razon.onchange = (e) => {
@@ -210,6 +230,7 @@ function contacto (i) {
 
 
 
+
 //Acá termina la seccion contacto
 
 //Acá empieza la seecioón Faqs
@@ -228,6 +249,90 @@ faqs.innerHTML = "<h4>¿Se puede solo realizar el diseño, sin el hosting y domi
 //Acá termina la sección Faqs
 
 //chat box
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
 
+  Tawk_API.onLoad = function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+
+    Tawk_API.showWidget()
+  }
+
+  Tawk_API.onLoad = function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    Tawk_API.setAttributes({
+        'name'  : 'Name',
+        'email' : 'email@email.com',
+        'hash'  : 'hash value'
+    }, function(error){
+      console.log(error);
+    });
+  }
+
+  Tawk_API.onLoad = function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    Tawk_API.toggleVisibility();
+  };
+
+  Tawk_API.onLoad = function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    if(Tawk_API.getWindowType() === 'inline'){
+      open('https://tawk.to/chat/624afbb12abe5b455fc46dbb/1fvqeebgk')
+    }else{
+      close()
+    }
+
+  Tawk_API.onLoad = function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+      Tawk_API.hideWidget();
+  };
+
+  Tawk_API.onLoad = function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/624afbb12abe5b455fc46dbb/1fvqeebgk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    Tawk_API.endChat();
+  };
+
+
+    console.log('Se activo el chat');
+
+
+  }
 
 

@@ -9,7 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Net Web</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Net Web</title>
 </head>
 <body>
     <header>
@@ -68,6 +69,11 @@
                     <input type="number" id="codigopostalc">
                     <label for="city">Ciudad</label>
                     <input type="text" id="ciudadc" type="search" class="autocomplete-dataset" class="form-control">
+                    <label for="pais">Pais</label>
+                    <select name="pais" id="paisc">
+                        <option value="0">Seleccionar...</option>
+                        <option value="" id="paisesc"></option>
+                    </select>
                     <label for="descirpcion">Razon de contacto</label>
                     <input type="text" id="descripcion1"><br>
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10">Escribir razon por la cual contacta</textarea><br>
@@ -117,31 +123,7 @@
             
         </section>
 
-        <div class="chat-box">
-            <!--client-->
-            <div class="client">
-                <img src="./Imagenes/Logo.png" alt="Logo">
-                <div class="client-info">
-                    <h2>Net Web</h2>
-                    <p>Online</p>
-                </div>
-            </div>
-            <!--main chat section-->
-            <div class="chats">
-                <div class="client-chat">Hola! ¿En que puedo ayudarte?</div>
-                <div class="my-chat">Gracias por contactarte!</div>
-            </div>
-            <!--input field section-->
-            <div class="chat-input">
-                <input type="text" placeholder="Ingresar mensaje" />
-                <button class="send-btn">Enviar</button>
-            </div>
-
-        </div>
-        <div class="chat-btn">
-            <img src="./Imagenes/messenger.png" alt="chaticon" class="chat-icon">
-        </div>
-
+    
         <footer>
             <ul>
                 <li>
