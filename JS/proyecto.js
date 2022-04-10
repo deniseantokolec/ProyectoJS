@@ -30,8 +30,14 @@ parrafo1.innerText = "Net Web es una empresa dedicada al desarrollo web fundada 
 
 //Aca termina la seccion nosotros
 
+//Acá empieza la seccion productos
+
+const productos = document.getElementById("productostext")
+productos.innerHTML = '<p>En esta sección explicaremos los productos que ofrecemos detallando en que consiste cada uno.</p> <h4>Solo Diseño</h4> <p>Si lo que buscas es solo un boceto con el diseño de la web, este es el producto indicado, lo unico que debes hacer es comentarnos que es lo que queres y nosostros te lo diseñamos</p> <h4>Diseño, Domminio, Testing</h4> <p>En este caso te diseñamos el sitio web en base a lo que estas buscando y además te generamos un dominio y testeamos el funcionamiento correscto del sitio. Las metodologias que usamos para el sesarrollo de la web son HTML, SASS, CSS, Javascript</p> <h4>Diseño, Domminio, Testing y SEO</h4> <p>En este ultimo producto que ofrecmemos incluye el diseño de la web con su respectivo desarrollo, el dominio del sitio, el testeo de su funcionamiento y el SEO, es decir, el posicionamiento del sitio en la world wide web (www) para que los usuarios del mmismmo puedan mencontrarlo facilmente y que el sitio tenga alta demamnda de visitas.</p>'
 
 
+
+//Aca termina ña seccion productos
 
 //Acá empieza la seccion presupuesto
 
@@ -120,24 +126,31 @@ const codpost = document.getElementById("codigopostalc")
 const ciudad = document.getElementById("ciudadc")
 const razon = document.getElementById("descripcion1")
 const motivo = document.getElementById("descripcion")
+const paises = document.getElementById("paisesc")
 
-const URL = 'http://api.countrylayer.com/v2/all?access_key=c14ffaa1fb205e08c55d841f677fdfb2'
 
-fetch (URL)
-  
-  .then((response) => response.json())
-  .then(dat=> {
-      let paises = document.getElementById("paisesc")
-      paises.innerHTML= null
-      dat.forEach(p => {
-        console.log(p.name);
-        let select = document.createElement('li')
-        select.innerHTML= p.name
-        paises.appendChild('li')
-        
-      });
-  
-  })
+const URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries'
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
+		'X-RapidAPI-Key': 'd2e397e665mshc8cb379f6067fdap1efdf0jsn6d1d324f09bf'
+	}
+};
+
+fetch(URL, options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+  .then(dat =>
+    dat.forEach(p => {
+      const select = document.createElement('select')
+      select.innerHTML = 
+      `<option>${p.name}</option>`
+      form.appendChild(select)
+    })
+  )
+	.catch(err => console.error(err));
+
 
 
 class contactos {
@@ -242,7 +255,6 @@ let presentacion = document.getElementById("faqs1")
 presentacion.innerText = "En esta sección encontraras las preguntas que pueden responder cuestiones recurrentes. En caso de tener una consulta que no se encuentre en las respuestas a continuación, enviarla completando los datos en la sección Contacto."
 
 faqs.innerHTML = "<h4>¿Se puede solo realizar el diseño, sin el hosting y dominio?</h4> <p>Si se puede pero eso se deberá pagar aparte en caso de querer hacerlo luego.</p> <h4>¿Que pasa si contrate un producto pero luego quiero cambiar?</h4> <p>En caso de seleccionar un producto con menos opciones se ofrece la adicion de los servcios faltantes con el adicional correspondiente, men caso de querer un producto con menos servicios se analizara la situación y se llegará a un acuerdo con el cliente</p>"
-
 //console.log(presentacion.innerText);
 //console.log(faqs.innerHTML);
 

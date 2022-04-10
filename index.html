@@ -15,9 +15,6 @@
 <body>
     <header>
         <nav>
-            <div id="logo"  >
-                <a id="imagen" href="#"><img id="imagen" src="./Imagenes/Logo.png" alt="Logo"></a>
-            </div>
             <ul>
                 <li>
                     <a href="#inicio">Inicio</a>
@@ -49,10 +46,15 @@
             <div id="nosotros" data-aos="fade-up-down" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Nosotros</h2>
                 <p id="nosotrostexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam repellendus eius tempore iure, nulla repudiandae at in est nihil ullam amet inventore quibusdam culpa, commodi vel cupiditate sit voluptatum!</p>
+  
             </div>
             <div id="productos" data-aos="fade-up-down" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Productos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam repellendus eius tempore iure, nulla repudiandae at in est nihil ullam amet inventore quibusdam culpa, commodi vel cupiditate sit voluptatum!</p>
+                <p id="productostext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam repellendus eius tempore iure, nulla repudiandae at in est nihil ullam amet inventore quibusdam culpa, commodi vel cupiditate sit voluptatum!</p>
+                <img src="./Imagenes/Imagen1.jpg" alt="img1" id="i1">
+                <img src="./Imagenes/Imagen3.jpg" alt="img2" id="i2">
+                <img src="./Imagenes/Imagen4.jpg" alt="img3" id="i3">
+                <img src="./Imagenes/Imagen5.jpg" alt="img4" id="i4">
             </div>
             <div id="contacto" data-aos="fade-up-down" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Contacto</h2>
@@ -84,36 +86,37 @@
                 <h2>Presupuesto</h2>
                 <p id="presupuestotext"></p>
                 <form id="presupuestoform"  action="" method="">
+                    <label for="nombre">Nombre</label>
                     <input type="text">
-                        <label for="nombre">Nombre</label>
+                    <label for="apellido">Apellido</label>   
                     <input type="text">
-                        <label for="apellido">Apellido</label>
+                    <label for="email">E-mail</label>
                     <input type="email">
-                        <label for="email">E-mail</label>
+                    <label for="telefono">Teléfono</label>   
                     <input type="tel">
-                        <label for="telefono">Teléfono</label>
+                    <label for="codigopostal">Código Postal</label>   
                     <input type="number">
-                        <label for="codigopostal">Código Postal</label>
-                    <input type="text">
-                        <label for="city">Ciudad</label>
+                    <label for="city">Ciudad</label>                       
                     <input type="text" name="city" id="ciudad">
-                        <label for="select">Sleccionar opción de producto</label>
+                    <label for="select">Sleccionar opción de producto</label>
                     <select name="opciones" id="opciones">
                         <option for="opciones" value="1">Seleccionar....</option>
                         <option for="opciones" value="2">Solo diseño</option> 
                         <option for="opciones" value="3">Diseño, Dominio, Testing</option>
                         <option for="opciones" value="4">Diseño, Dominio, Testing, Seo</option>
                     </select>
-                        <label for="semanas">Semanas maximas de entrega</label>
+                    <label for="semanas">Semanas maximas de entrega</label>
                     <input type="number" id="semmax" value="0">
                     <p id="datos"></p>
-                        <label id="calculo" for="valorfinal">Presupuesto: $</label>
+                    <label id="calculo" for="valorfinal">Presupuesto: $</label>
                     <output id="resultado" for=""></output>
                     <button id="calcular" type="button">Calcular</button><br>
-                    <label for="newpresup">Si no encuentra producto, describa detalle de pedido:</label><br>
-                    <textarea name="newpresup" id="pedido" cols="30" rows="10"></textarea><br>
-                    <button id="envio" type="submit">Pedir presupuesto</button>
-                    </form>      
+                    <div id="newpresup">
+                        <label for="newpresup">Si no encuentra producto, describa detalle de pedido:</label><br>
+                        <textarea name="newpresup" id="pedido" cols="173" rows="10"></textarea><br>
+                        <button id="envio" type="submit">Pedir presupuesto</button>
+                    </div>
+                </form>      
             </div>
             <div id="faqs" data-aos="fade-up-down" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="center-center">
                 <h2>Preguntas frecuentes</h2>

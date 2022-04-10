@@ -15,13 +15,14 @@ $color2:rgb(253, 253, 253);
 $borde1: solid;
 
 //texto
-$font-family:'Source Code Pro', monospace;
+$font-family:Georgia;
 $tamaño1:12px;
 $tamaño2:14px;
 $tamaño3:16px;
 $tamaño4:18px;
 $tamaño5:20px;
-$tañano6:50px;
+$tamaño6:30px;
+$tamaño7:50px;
 
 
 [data-aos] {
@@ -29,60 +30,65 @@ $tañano6:50px;
   }
   [data-aos].animated {
     visibility: visible;
-  }
+}
+
 
 header{
     background-color: $backgroudcolo1;
-    height: 50%;
-}
-nav{
-    background-color: $backgroudcolo1;
-    #imagen{
-        height: 0.5%;
-        width: 3%;       
-        margin-left: 0.5%;
+    width: 100%;
+    height: 50px;
+
+    nav{
+        background-color: $backgroudcolo1;
+        height: 50px;
+        
+        ul li{
+        display: inline-block;
+        margin-left: 5%;
         margin-top: 2%;
-        margin-bottom: 0.5%;
+        margin-bottom: 2%;
+        padding: auto;
+        text-align: center;
+            
+        }       
+            
+            
+        a{
+            color: $color1;
+            list-style: none;
+            text-decoration-line: none;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: bold;
+            font-size: $tamaño3;         
+            
+        
+        }
     }
-
-}
-ul li{
-    display: inline-block;
-    margin-left: 9%;
-    margin-top: 0.5%;
-    padding: 0%;
-    margin-bottom: 2%;
+ 
     
-
-
-    a{
-        color: $color1;
-        list-style: none;
-        text-decoration-line: none;
-        font-family: 'Source Code Pro', monospace;
-        font-weight: bold;
-        font-size: $tamaño3;
-    }
 }
 
 
 
 main{
     background-image: $backgroudcolo2;
+    height: 1850px;
+
     div{
         h1{
             margin-bottom: 2%;
             text-align: center;
             font-family: $font-family;
-            font-size: $tañano6;
+            font-size: $tamaño6;
             font-weight: bold;
         }
     }
     section{
-        display: inline-block;
-        width: 100%;
+        display: flexbox;
+        margin-left: 0.2%;
+        margin-right: 0.2%;
         div{
-            height: 300px;
+            width: 100%;
             h2{
                 border-style: $borde1;
                 background-color: $backgroudcolo1;
@@ -96,7 +102,7 @@ main{
             }
             p{
                 font-family: $font-family;
-                font-weight: bold;
+
             }
 
 
@@ -105,16 +111,47 @@ main{
     }
 }
 
+#nosotros{
+    height: 150px;
+    width: 100%;
+    #nosotrostexto{
+        margin-top: 0.5%;
+    }
+}
+#productos{
+    height: 350px;
+    width: 100%;
+    #productostext{
+        margin-top: 0.5%;
+        
+    }
+    #i1{
+        margin-top: 2%;
+        margin-left: 20px;
+    }
+    #i2{
+        margin-top: 2%;
+        margin-left: 50px;
+    }
+    #i3{
+        margin-top: 2%;
+        margin-left: 60px;
+
+    }
+    #i4{
+        margin-top: 2%;
+        margin-left: 60px;
+    } 
+}
+
 #contacto{
-    height: auto;
-    display: grid;
-    grid-template-areas: 
-    "nombre" "apellido" "email"
-    "telefono" "codigopostal" "ciudad" 
-    "descripcion1"
-    "descripcion";
+    height: 330px;
+
+    #contactoform{
+        margin-top: 0.5%;
+    }
+
     #nombre{
-        grid-area: "nombre";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
@@ -122,42 +159,36 @@ main{
         
     }
     #apellido{
-        grid-area: "apellido";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #email{
-        grid-area: "email";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #telefono{
-        grid-area: "telefono";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #codigopostal{
-        grid-area: "codigopostal";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #ciudad{
-        grid-area: "ciudad";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #descripcion1{
-        grid-area: "descripcion1";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
@@ -165,7 +196,6 @@ main{
     }
 
     #descripcion{
-        grid-template-areas: "descripcion";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
@@ -173,15 +203,14 @@ main{
     }
 }
 #presupuesto{
-    height: auto;
-    display: grid;
-    grid-template-areas: 
-    "nombre" "apellido" "email"
-    "telefono" "codigopostal" "ciudad" 
-    "descripcion1"
-    "descripcion";
+    height: 400px;
+    #presupuestotext{
+        margin-top: 0.5%;
+    }
+    #presupuestoform{
+        margin-top: 1%;
+    }
     #nombre{
-        grid-area: "nombre";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
@@ -189,50 +218,47 @@ main{
         
     }
     #apellido{
-        grid-area: "apellido";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #email{
-        grid-area: "email";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #telefono{
-        grid-area: "telefono";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #codigopostal{
-        grid-area: "codigopostal";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #ciudad{
-        grid-area: "ciudad";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
     }
     #descripcion1{
-        grid-area: "descripcion1";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
         font-weight: bold;
+    }
+
+    #newpresup{
+        margin-top: 2%;
     }
 
     #descripcion{
-        grid-template-areas: "descripcion";
         font-family: $font-family;
         font-size: $tamaño3;
         text-align: left;
@@ -240,42 +266,38 @@ main{
     }
 }
 
+#faqs{
+    height: 300px;
+    width: 100%;
+    #faqs1{
+        font-family: $font-family;
+        font-size: $tamaño4;
+        text-align: left;
 
-.chat-btn{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #fff;
-    cursor: pointer;
-    overflow: hidden;
-    position: fixed;
-    bottom: 20px;
-}
-.chat-icon{
-    width: 20%;
-    height: 20%;
-    border-radius: 50%;
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 5px;
-    transition: ease-in-out;
+    }
+    #faqs2{
+        font-family: $font-family;
+        font-size: $tamaño3;
+        text-align: left;
 
-}
-.chat-icon:hover{
-    transform: rotate(30deg);
-
+        h4{
+            font-weight:bold;
+            font-size: $tamaño4;
+        }
+    }
 }
 
 
 
 footer{
     background-color: $backgroudcolo1;
+    margin-top: 20%;
     ul li{
         display: inline-block;
         margin-left: 8%;
-        padding: 0.1%;
-        margin-bottom: 0.5%;
+        padding: 0%;
+        margin-bottom: 0%;
+
         
     
     

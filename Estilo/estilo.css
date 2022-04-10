@@ -14,28 +14,22 @@
 
 header {
   background-color: #030303;
-  height: 50%;
+  width: 100%;
+  height: 50px;
 }
-
-nav {
+header nav {
   background-color: #030303;
+  height: 50px;
 }
-nav #imagen {
-  height: 0.5%;
-  width: 3%;
-  margin-left: 0.5%;
-  margin-top: 2%;
-  margin-bottom: 0.5%;
-}
-
-ul li {
+header nav ul li {
   display: inline-block;
-  margin-left: 9%;
-  margin-top: 0.5%;
-  padding: 0%;
+  margin-left: 5%;
+  margin-top: 2%;
   margin-bottom: 2%;
+  padding: auto;
+  text-align: center;
 }
-ul li a {
+header nav a {
   color: #f504c1;
   list-style: none;
   text-decoration-line: none;
@@ -46,193 +40,212 @@ ul li a {
 
 main {
   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  height: 1850px;
 }
 main div h1 {
   margin-bottom: 2%;
   text-align: center;
-  font-family: "Source Code Pro", monospace;
-  font-size: 50px;
+  font-family: Georgia;
+  font-size: 30px;
   font-weight: bold;
 }
 main section {
-  display: inline-block;
-  width: 100%;
+  display: flexbox;
+  margin-left: 0.2%;
+  margin-right: 0.2%;
 }
 main section div {
-  height: 300px;
+  width: 100%;
 }
 main section div h2 {
   border-style: solid;
   background-color: #030303;
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-weight: bold;
   font-size: 20px;
   color: #fdfdfd;
   text-align: center;
 }
 main section div p {
-  font-family: "Source Code Pro", monospace;
-  font-weight: bold;
+  font-family: Georgia;
+}
+
+#nosotros {
+  height: 150px;
+  width: 100%;
+}
+#nosotros #nosotrostexto {
+  margin-top: 0.5%;
+}
+
+#productos {
+  height: 350px;
+  width: 100%;
+}
+#productos #productostext {
+  margin-top: 0.5%;
+}
+#productos #i1 {
+  margin-top: 2%;
+  margin-left: 20px;
+}
+#productos #i2 {
+  margin-top: 2%;
+  margin-left: 50px;
+}
+#productos #i3 {
+  margin-top: 2%;
+  margin-left: 60px;
+}
+#productos #i4 {
+  margin-top: 2%;
+  margin-left: 60px;
 }
 
 #contacto {
-  height: auto;
-  display: grid;
-  grid-template-areas: "nombre" "apellido" "email" "telefono" "codigopostal" "ciudad" "descripcion1" "descripcion";
+  height: 330px;
+}
+#contacto #contactoform {
+  margin-top: 0.5%;
 }
 #contacto #nombre {
-  grid-area: "nombre";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #apellido {
-  grid-area: "apellido";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #email {
-  grid-area: "email";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #telefono {
-  grid-area: "telefono";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #codigopostal {
-  grid-area: "codigopostal";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #ciudad {
-  grid-area: "ciudad";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #descripcion1 {
-  grid-area: "descripcion1";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #contacto #descripcion {
-  grid-template-areas: "descripcion";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 
 #presupuesto {
-  height: auto;
-  display: grid;
-  grid-template-areas: "nombre" "apellido" "email" "telefono" "codigopostal" "ciudad" "descripcion1" "descripcion";
+  height: 400px;
+}
+#presupuesto #presupuestotext {
+  margin-top: 0.5%;
+}
+#presupuesto #presupuestoform {
+  margin-top: 1%;
 }
 #presupuesto #nombre {
-  grid-area: "nombre";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #presupuesto #apellido {
-  grid-area: "apellido";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #presupuesto #email {
-  grid-area: "email";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #presupuesto #telefono {
-  grid-area: "telefono";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #presupuesto #codigopostal {
-  grid-area: "codigopostal";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #presupuesto #ciudad {
-  grid-area: "ciudad";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 #presupuesto #descripcion1 {
-  grid-area: "descripcion1";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
+}
+#presupuesto #newpresup {
+  margin-top: 2%;
 }
 #presupuesto #descripcion {
-  grid-template-areas: "descripcion";
-  font-family: "Source Code Pro", monospace;
+  font-family: Georgia;
   font-size: 16px;
   text-align: left;
   font-weight: bold;
 }
 
-.chat-btn {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
-  overflow: hidden;
-  position: fixed;
-  bottom: 20px;
+#faqs {
+  height: 300px;
+  width: 100%;
 }
-
-.chat-icon {
-  width: 20%;
-  height: 20%;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  transition: ease-in-out;
+#faqs #faqs1 {
+  font-family: Georgia;
+  font-size: 18px;
+  text-align: left;
 }
-
-.chat-icon:hover {
-  transform: rotate(30deg);
+#faqs #faqs2 {
+  font-family: Georgia;
+  font-size: 16px;
+  text-align: left;
+}
+#faqs #faqs2 h4 {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 footer {
   background-color: #030303;
+  margin-top: 20%;
 }
 footer ul li {
   display: inline-block;
   margin-left: 8%;
-  padding: 0.1%;
-  margin-bottom: 0.5%;
+  padding: 0%;
+  margin-bottom: 0%;
 }
 footer ul li a {
   color: #f504c1;
